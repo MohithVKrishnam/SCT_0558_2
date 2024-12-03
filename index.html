@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clock Stopwatch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Analog Stopwatch</h1>
+
+    <!-- Analog Clock -->
+    <div class="stopwatch">
+      <div class="clock">
+        <div class="hand second-hand" id="second-hand"></div>
+        <div class="hand minute-hand" id="minute-hand"></div>
+        <div class="hand millisecond-hand" id="millisecond-hand"></div>
+        <div class="center"></div>
+      </div>
+
+      <!-- Digital Display -->
+      <div class="digital-display">
+        <span id="minutes">00</span>:<span id="seconds">00</span>:<span id="milliseconds">00</span>
+      </div>
+
+      <!-- Buttons -->
+      <div class="buttons">
+        <button id="start-btn">Start</button>
+        <button id="pause-btn">Pause</button>
+        <button id="reset-btn">Reset</button>
+        <button id="lap-btn">Lap</button>
+      </div>
+
+      <!-- Laps List -->
+      <div class="laps">
+        <ul id="lap-list"></ul>
+      </div>
+    </div>
+
+    <!-- Light Mode Toggle -->
+    <button id="toggle-mode">Toggle Mode</button>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

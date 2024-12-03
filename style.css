@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background: #1e1e2f;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #4CAF50;
+}
+
+/* Stopwatch Clock */
+.stopwatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.clock {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.8));
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7), inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 3px;
+  background: #fff;
+  transform-origin: bottom;
+  transform: translateX(-50%) rotate(0deg);
+}
+
+.second-hand {
+  height: 130px;
+  background: #FF0000;
+}
+
+.minute-hand {
+  height: 100px;
+  background: #00FF00;
+}
+
+.millisecond-hand {
+  height: 90px;
+  background: #FFFF00;
+}
+
+/* Digital Display */
+.digital-display {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-top: 20px;
+}
+
+/* Buttons */
+.buttons button {
+  padding: 15px 20px;
+  margin: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background: linear-gradient(145deg, #ff6f61, #d04a3b);
+  color: white;
+}
+
+.buttons button:hover {
+  background: linear-gradient(145deg, #d04a3b, #ff6f61);
+}
+
+.buttons button:active {
+  transform: scale(0.95);
+}
+
+/* Laps */
+.laps {
+  margin-top: 20px;
+}
+
+#lap-list {
+  list-style: none;
+  padding: 0;
+}
+
+#lap-list li {
+  padding: 10px 20px;
+  margin: 5px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+/* Light Mode */
+.light-mode {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.light-mode .stopwatch {
+  background: #fff;
+}
+
+.light-mode .buttons button {
+  background: linear-gradient(145deg, #1e90ff, #00bfff);
+}
+
+.light-mode .buttons button:hover {
+  background: linear-gradient(145deg, #00bfff, #1e90ff);
+}
+
+.light-mode .laps li {
+  background: rgba(0, 0, 0, 0.05);
+}
